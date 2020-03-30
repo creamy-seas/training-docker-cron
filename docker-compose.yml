@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+
+  simple-cron-docker:
+    build: .
+    command:  bash -c "/etc/init.d/cron start && tail -f /var/log/cron.log"
+    restart: always

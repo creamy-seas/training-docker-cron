@@ -1,0 +1,5 @@
+# Write a dummy log every other minute
+*/2 * * * *  cd /core && echo "🍄" >> /var/log/cron.log 2>&1
+
+# Run python script every minute
+* * * * * cd /core && /usr/bin/env python3.7 /core/dummy_python.py > /var/log/cron.log 2>&1
